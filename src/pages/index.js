@@ -38,6 +38,7 @@ export const query = graphql`
                 company_title
                 end_date
                 job_responsibilities
+                location
                 job_title
                 start_date
               }

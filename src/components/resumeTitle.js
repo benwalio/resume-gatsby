@@ -1,10 +1,10 @@
 import React from 'react'
-import { RichText } from "prismic-reactjs";
+import { Title } from "../assets/styles/main";
 
 const ResumeTitle = (props) => {
     return (
         <>
-            <RichText render={props.title} />
+            <Title render={props.title} />
         </>
     )
 }
