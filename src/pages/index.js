@@ -1,21 +1,74 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import SliceZone from '../components/sliceZone'
 
-const IndexPage = () => (
+export const query = graphql`
+{
+  prismic {
+    allResumes {
+      edges {
+        node {
+          body {
+            ... on PRISMIC_ResumeBodyResume_title {
+              type
+              primary {
+                about
+                name
+              }
+            }
+            ... on PRISMIC_ResumeBodySocial_accounts {
+              type
+              fields {
+                account_handle
+                account_link {
+                  ... on PRISMIC__ExternalLink {
+                    url
+                  }
+                }
+                account_name
+                account_type
+              }
+            }
+            ... on PRISMIC_ResumeBodyResume_employment_history_entry {
+              type
+              fields {
+                company_title
+                end_date
+                job_responsibilities
+                job_title
+                start_date
+              }
+            }
+            ... on PRISMIC_ResumeBodyResume_projects {
+              type
+              fields {
+                type
+                project_description
+                organization
+              }
+            }
+            ... on PRISMIC_ResumeBodySkill_ratings {
+              type
+              fields {
+                name
+                skill_strength
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
+
+const IndexPage = (props) => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <SliceZone body={props.data.prismic.allResumes.edges[0].node.body} />
   </Layout>
 )
 
