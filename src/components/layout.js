@@ -12,7 +12,7 @@ import { Main, Grommet } from 'grommet'
 import { grommet } from 'grommet/themes'
 
 import Header from "./header"
-import "./layout.css"
+// import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,7 +27,6 @@ const Layout = ({ children }) => {
 
   return (
     <Grommet theme={grommet} plain>
-      <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
           margin: `0 auto`,
