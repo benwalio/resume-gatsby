@@ -35,7 +35,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "postinstall": "node scripts/injectPrismic.js",
+      "postinstall": "node scripts/injectPrismic.js",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
