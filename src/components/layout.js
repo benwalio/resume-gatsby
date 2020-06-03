@@ -8,6 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { Main, Grommet } from 'grommet'
+import { grommet } from 'grommet/themes'
 
 import Header from "./header"
 import "./layout.css"
@@ -24,7 +26,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <Grommet theme={grommet} plain>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -33,14 +35,14 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <main>{children}</main>
+        <Main>{children}</Main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
-    </>
+    </Grommet>
   )
 }
 
