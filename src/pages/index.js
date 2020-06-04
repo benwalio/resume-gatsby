@@ -38,9 +38,9 @@ export const query = graphql`
                 company_title
                 end_date
                 job_responsibilities
-                location
                 job_title
                 start_date
+                location
               }
             }
             ... on PRISMIC_ResumeBodyResume_projects {
@@ -52,10 +52,18 @@ export const query = graphql`
               }
             }
             ... on PRISMIC_ResumeBodySkill_ratings {
-              type
               fields {
                 name
                 skill_strength
+              }
+              type
+            }
+            ... on PRISMIC_ResumeBodyCertifications {
+              type
+              fields {
+                cert_date
+                cert_issuer
+                cert_name
               }
             }
           }

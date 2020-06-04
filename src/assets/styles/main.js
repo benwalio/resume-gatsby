@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { RichText } from 'prismic-reactjs'
-import { Box, Grid } from 'grommet'
+import { Box, Grid, Main } from 'grommet'
 
-export const Title = styled(RichText)`
-
+export const MainDiv = styled(Main)`
+    width: 75vw;
+    margin: auto;
 `
 
 export const ResumeSection = styled(Box)`
@@ -22,4 +22,10 @@ export const HistoryInfo = styled(Box)`
 
 export const HistoryContent = styled(Box)`
     
+`
+
+export const SectionTitle = styled.h2`
+    text-align: center;
+        color: #555555;
+        border-bottom: 1px solid #555555;
 `

@@ -4,12 +4,14 @@ import {
   History,
   HistoryInfo,
   HistoryContent,
+  SectionTitle,
 } from "../assets/styles/main";
 import { Organization, Type, Description } from "../assets/styles/projects";
 
 const Projects = (props) => {
   return (
     <ResumeSection>
+      <SectionTitle>Projects</SectionTitle>
       {props.content.map((project, idx) => (
         <History
           rows={["flex"]}
@@ -23,7 +25,10 @@ const Projects = (props) => {
           <HistoryInfo gridArea="organization">
             <Organization render={project.organization} />
           </HistoryInfo>
-          <HistoryContent gridArea="content" border={{ color: "light-2", side: "bottom", size: "small" }}>
+          <HistoryContent
+            gridArea="content"
+            border={{ color: "light-2", side: "bottom", size: "small" }}
+          >
             <Type render={project.type} />
             <Description render={project.project_description} />
           </HistoryContent>

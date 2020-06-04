@@ -1,5 +1,5 @@
 import React from "react";
-import { ResumeSection } from "../assets/styles/main";
+import { ResumeSection, SectionTitle } from "../assets/styles/main";
 import {
   SkillName,
   SkillStackBox,
@@ -11,6 +11,7 @@ import {
 const Skills = (props) => {
   return (
     <ResumeSection>
+    <SectionTitle>Skills</SectionTitle>
       <SkillStackGrid columns={{ count: 5, size: "auto" }} gap="medium">
         {props.skills.map((skill, idx) => (
           <SkillStackBox align="center">
@@ -35,7 +36,7 @@ const Skills = (props) => {
                   },
                 ]}
               />
-              <SkillName render={skill.name} />
+              <SkillName>{skill.name}</SkillName>
             </SkillStack>
           </SkillStackBox>
         ))}

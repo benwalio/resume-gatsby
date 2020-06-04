@@ -4,6 +4,7 @@ import {
   HistoryInfo,
   HistoryContent,
   History,
+  SectionTitle
 } from "../assets/styles/main";
 import {
   Company,
@@ -19,6 +20,7 @@ import moment from "moment";
 const employmentHistory = (props) => {
   return (
     <ResumeSection margin={{ top: "medium" }}>
+    <SectionTitle>Employment History</SectionTitle>
       {props.content.map((entry, idx) => (
         <History
           rows={["flex"]}

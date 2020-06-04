@@ -7,40 +7,26 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import { Main, Grommet } from 'grommet'
-import { grommet } from 'grommet/themes'
+import { Grommet } from 'grommet'
+import { MainDiv } from '../assets/styles/main'
+import { base } from 'grommet/themes'
+import { deepMerge } from 'grommet/utils'
 
-import Header from "./header"
 // import "./layout.css"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
+const theme = deepMerge(base,{
+  global: {
+    font: {
+      family: 'Arial, Roboto'
     }
-  `)
+  }
+})
+
+const Layout = ({ children }) => {
 
   return (
-    <Grommet theme={grommet} plain>
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <Main>{children}</Main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+    <Grommet theme={theme}>
+        <MainDiv>{children}</MainDiv>
     </Grommet>
   )
 }

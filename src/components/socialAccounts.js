@@ -1,5 +1,4 @@
 import React from "react";
-import { ResumeSection } from "../assets/styles/main";
 import {
   SocialEntry,
   SocialSection,

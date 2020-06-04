@@ -4,6 +4,7 @@ import SocialAccounts from "./socialAccounts";
 import EmploymentHistory from "./employmentHistory";
 import Projects from "./projects";
 import Skills from './skills'
+import Certifications from './certifications'
 
 function SliceZone(props) {
   const body = props.body;
@@ -18,6 +19,8 @@ function SliceZone(props) {
           return <EmploymentHistory key={idx} content={bodyContent.fields} />;
         } else if (bodyContent.type === "resume_projects") {
           return <Projects key={idx} content={bodyContent.fields} />;
+        } else if (bodyContent.type === "certifications") {
+          return <Certifications key={idx} content={bodyContent.fields} />;
         } else if (bodyContent.type === "skill_ratings") {
             return <Skills key={idx} skills={bodyContent.fields} />
         }
