@@ -27,10 +27,7 @@
   <p align="center">
     A static Gatsby JS page that pulls in data from Prismic CMS and adds it to a Resume. Can be dynamically updated and also support offline. 
     <br />
-    <a href="https://github.com/benwalio/resume-gatsby"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/benwalio/resume-gatsby">View Demo</a>
+    <a href="https://resume.benwal.io">View Live Resume</a>
     ·
     <a href="https://github.com/benwalio/resume-gatsby/issues">Report Bug</a>
     ·
