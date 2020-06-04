@@ -12,14 +12,6 @@ module.exports = {
         repositoryName: `benwal-resume`
       }
     },
-    {
-      resolve: 'gatsby-plugin-matomo',
-      options: {
-        siteId: '1',
-        matomoUrl: 'https://benwal.matomo.cloud/',
-        siteUrl: 'https://resume.benwal.io'
-      }
-    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
