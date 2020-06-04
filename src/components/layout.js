@@ -8,7 +8,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Grommet } from "grommet";
-import { MainDiv } from "../assets/styles/main";
+import { PageDiv, MainDiv } from "../assets/styles/main";
 import { base } from "grommet/themes";
 import { deepMerge } from "grommet/utils";
 
@@ -22,8 +22,10 @@ const theme = deepMerge(base, {
 
 const Layout = ({ children }) => {
   return (
-    <Grommet theme={theme}>
-      <MainDiv>{children}</MainDiv>
+    <Grommet theme={theme} full> 
+      <PageDiv full>
+        <MainDiv>{children}</MainDiv>
+      </PageDiv>
     </Grommet>
   );
 };
