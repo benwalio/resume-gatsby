@@ -48,7 +48,6 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Usage](#usage)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
@@ -60,18 +59,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`benwalio`, `resume-gatsby`, `benwal_io`, `ben@benwal.io`
-
+[![Resume Screen Shot][product-screenshot]](https://resume.benwal.io)
 
 ### Built With
 
 * [Gatsby JS](gatsbyjs.org/)
 * [React.js](reactjs.org/)
-* [styled-components](styled-components.com/)
 * [Prismic](prismic.io/)
 
 
@@ -83,32 +76,26 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * npm
 ```sh
 npm install npm@latest -g
+npm install yarn
 ```
 
 ### Installation
  
-1. Clone the resume-gatsby
+1. Clone the resume-gatsby repo
 ```sh
 git clone https://github.com/benwalio/resume-gatsby.git
 ```
 2. Install NPM packages
 ```sh
-npm install
+yarn install
 ```
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
+3. Clean the Gatsby Cache and run
+```sh
+gatsby clean && yarn develop
+```
 
 
 <!-- ROADMAP -->
@@ -141,7 +128,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@benwal_io](https://twitter.com/benwal_io) - ben@benwal.io
+Ben Wallace - [@benwal_io](https://twitter.com/benwal_io) - ben@benwal.io
 
 Project Link: [https://github.com/benwalio/resume-gatsby](https://github.com/benwalio/resume-gatsby)
 
@@ -150,9 +137,9 @@ Project Link: [https://github.com/benwalio/resume-gatsby](https://github.com/ben
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* []()
-* []()
-* []()
+* [styled-components](styled-components.com/)
+* [Grommet](https://v2.grommet.io/)
+* [Hero Patterns](https://www.heropatterns.com/)
 
 
 
