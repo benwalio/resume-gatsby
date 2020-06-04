@@ -60,9 +60,9 @@
 
 ### Built With
 
-* [Gatsby JS](gatsbyjs.org/)
-* [React.js](reactjs.org/)
-* [Prismic](prismic.io/)
+* [Gatsby JS](https://gatsbyjs.org/)
+* [React.js](https://reactjs.org/)
+* [Prismic](https://prismic.io/)
 
 
 
