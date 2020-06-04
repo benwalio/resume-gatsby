@@ -87,6 +87,7 @@ git clone https://github.com/benwalio/resume-gatsby.git
 ```
 2. Install NPM packages
 ```sh
+cd resume-gatsby
 yarn install
 ```
 3. Clean the Gatsby Cache and run
@@ -134,7 +135,7 @@ Project Link: [https://github.com/benwalio/resume-gatsby](https://github.com/ben
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* [styled-components](styled-components.com/)
+* [styled-components](https://styled-components.com/)
 * [Grommet](https://v2.grommet.io/)
 * [Hero Patterns](https://www.heropatterns.com/)
 
