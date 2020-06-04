@@ -1,5 +1,6 @@
+import React from 'react'
 import styled from "styled-components";
-import { Box, Grid, Main } from 'grommet'
+import { Box, Grid, Main, ResponsiveContext } from 'grommet'
 
 export const MainDiv = styled(Main)`
     width: 75vw;
