@@ -19,7 +19,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/benwalio/resume-gatsby">
-    <img src="assets/img/logo.png" alt="Logo" width="80" height="80">
+    <img src="src/assets/img/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Resume Page</h3>
@@ -159,4 +159,4 @@ Project Link: [https://github.com/benwalio/resume-gatsby](https://github.com/ben
 [license-url]: https://github.com/benwalio/resume-gatsby/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/ben-wallace-88787620/
-[product-screenshot]: assets/img/screenshot.png
+[product-screenshot]: src/assets/img/screenshot.png
