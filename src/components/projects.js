@@ -14,6 +14,7 @@ const Projects = (props) => {
       <SectionTitle>Projects</SectionTitle>
       {props.content.map((project, idx) => (
         <History
+          key={idx}
           rows={["flex"]}
           columns={["1/3", "flex"]}
           gap="small"

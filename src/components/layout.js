@@ -16,16 +16,30 @@ const theme = deepMerge(base, {
   global: {
     font: {
       family: "Arial, Roboto",
+    },
+    breakpoints: {
+      small: {
+        value: 600
+      },
+      medium: {
+        value: 900
+      },
+      large: {
+        value: 1400
+      },
+      xlarge: {
+        value: 1700
+      }
     }
   },
 });
 
 const Layout = ({ children }) => {
   return (
-    <Grommet theme={theme} full> 
-      <PageDiv full>
-        <MainDiv>{children}</MainDiv>
-      </PageDiv>
+    <Grommet theme={theme} full>
+        <PageDiv>
+          <MainDiv>{children}</MainDiv>
+        </PageDiv>
     </Grommet>
   );
 };

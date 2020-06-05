@@ -14,11 +14,11 @@ const Skills = (props) => {
     <SectionTitle>Skills</SectionTitle>
       <SkillStackGrid columns={{ count: 5, size: "auto" }} gap="medium">
         {props.skills.map((skill, idx) => (
-          <SkillStackBox align="center">
+          <SkillStackBox align="center" key={idx}>
             <SkillStack anchor="center">
               <SkillStrength
                 max="100"
-                round="true"
+                round='true'
                 type="circle"
                 size="small"
                 values={[

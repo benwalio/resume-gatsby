@@ -23,6 +23,7 @@ const EmploymentHistory = (props) => {
     <SectionTitle>Employment History</SectionTitle>
       {props.content.map((entry, idx) => (
         <History
+          key={idx}
           rows={["flex"]}
           columns={["1/3", "flex"]}
           gap="small"

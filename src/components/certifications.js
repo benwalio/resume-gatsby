@@ -15,7 +15,7 @@ const Certifications = (props) => {
       <SectionTitle>Certifications</SectionTitle>
       <CertGrid columns={{ count: 3, size: "auto" }} gap="medium">
         {props.content.map((cert, idx) => (
-          <CertCard align="center">
+          <CertCard align="center" key={idx}>
             <CertName render={cert.cert_name} />
             <CertOrg>{cert.cert_issuer}</CertOrg>
             <CertDate>{moment(cert.cert_date).format("MMM YYYY")}</CertDate>

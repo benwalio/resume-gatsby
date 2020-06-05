@@ -17,11 +17,12 @@ export const AcctLink = styled(RichText)`
 
 export const SocialEntry = styled(Box)`
     justify-content: center;
-    margin: auto .5rem;
+    margin: auto;
+    padding: auto;
 `
 
 export const SocialSection = styled(Grid)`
-    height: 3rem;
+    /* height: 3rem; */
 `
 
 export const SocialLink = styled(Anchor)`
