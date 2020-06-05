@@ -28,7 +28,7 @@ const SocialAccounts = (props) => {
           large: ["auto","auto","auto","auto","auto"],
           xlarge: ["auto","auto","auto","auto","auto"],
         }}
-        rows={'auto'}
+        rows='auto'
         gap="small"
       >
         {props.accounts.map((account, idx) => (
