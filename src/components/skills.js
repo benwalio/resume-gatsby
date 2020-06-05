@@ -7,18 +7,36 @@ import {
   SkillStack,
   SkillStackGrid,
 } from "../assets/styles/skills";
+import { ResponsiveContext } from "grommet";
+
+const ResponsiveGrid = ({ children, columns, ...props }) => {
+  const size = React.useContext(ResponsiveContext);
+  return (
+    <SkillStackGrid columns={columns[size]} {...props}>
+      {children}
+    </SkillStackGrid>
+  );
+};
 
 const Skills = (props) => {
   return (
     <ResumeSection>
-    <SectionTitle>Skills</SectionTitle>
-      <SkillStackGrid columns={{ count: 5, size: "auto" }} gap="medium">
+      <SectionTitle>Skills</SectionTitle>
+      <ResponsiveGrid
+        columns={{
+          small: ["auto", "auto"],
+          medium: ["auto", "auto", "auto"],
+          large: ["auto", "auto", "auto", "auto", "auto"],
+          xlarge: ["auto", "auto", "auto", "auto", "auto"],
+        }}
+        gap="medium"
+      >
         {props.skills.map((skill, idx) => (
-          <SkillStackBox align="center">
+          <SkillStackBox align="center" key={idx}>
             <SkillStack anchor="center">
               <SkillStrength
                 max="100"
-                round="true"
+                round={true}
                 type="circle"
                 size="small"
                 values={[
@@ -40,7 +58,7 @@ const Skills = (props) => {
             </SkillStack>
           </SkillStackBox>
         ))}
-      </SkillStackGrid>
+      </ResponsiveGrid>
     </ResumeSection>
   );
 };
