@@ -10,7 +10,6 @@ import { Linkedin, Twitter, Github, Phone, Mail } from "grommet-icons";
 
 const ResponsiveGrid = ({ children, columns, ...props }) => {
   const size = React.useContext(ResponsiveContext);
-  console.log(size)
   return (
     <SocialSection columns={columns[size]} {...props}>
       {children}

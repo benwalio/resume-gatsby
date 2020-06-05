@@ -4,7 +4,7 @@ import {
   HistoryInfo,
   HistoryContent,
   History,
-  SectionTitle
+  SectionTitle,
 } from "../assets/styles/main";
 import {
   Company,
@@ -14,23 +14,47 @@ import {
   Responsibilities,
   DateLocBox,
 } from "../assets/styles/employmentHistory";
+import { ResponsiveContext } from "grommet";
 
 import moment from "moment";
+
+const ResponsiveGrid = ({ children, areas, ...props }) => {
+  const size = React.useContext(ResponsiveContext);
+  return (
+    <History areas={areas[size]} {...props}>
+      {children}
+    </History>
+  );
+};
 
 const EmploymentHistory = (props) => {
   return (
     <ResumeSection margin={{ top: "medium" }}>
-    <SectionTitle>Employment History</SectionTitle>
+      <SectionTitle>Employment History</SectionTitle>
       {props.content.map((entry, idx) => (
-        <History
+        <ResponsiveGrid
           key={idx}
-          rows={["flex"]}
+          rows={["auto","auto"]}
           columns={["1/3", "flex"]}
           gap="small"
-          areas={[
-            { name: "company", start: [0, 0], end: [0, 0] },
-            { name: "content", start: [1, 0], end: [1, 0] },
-          ]}
+          areas={{
+            small: [
+              { name: "company", start: [0, 0], end: [1, 0] },
+              { name: "content", start: [0, 1], end: [1, 1] },
+            ],
+            medium: [
+              { name: "company", start: [0, 0], end: [0, 0] },
+              { name: "content", start: [1, 0], end: [1, 0] },
+            ],
+            large: [
+              { name: "company", start: [0, 0], end: [0, 0] },
+              { name: "content", start: [1, 0], end: [1, 0] },
+            ],
+            xlarge: [
+              { name: "company", start: [0, 0], end: [0, 0] },
+              { name: "content", start: [1, 0], end: [1, 0] },
+            ],
+          }}
         >
           <HistoryInfo gridArea="company">
             <Company render={entry.company_title} />
@@ -51,7 +75,7 @@ const EmploymentHistory = (props) => {
             </DateLocBox>
             <Responsibilities render={entry.job_responsibilities} />
           </HistoryContent>
-        </History>
+        </ResponsiveGrid>
       ))}
     </ResumeSection>
   );

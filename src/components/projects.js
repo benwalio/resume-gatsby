@@ -7,21 +7,45 @@ import {
   SectionTitle,
 } from "../assets/styles/main";
 import { Organization, Type, Description } from "../assets/styles/projects";
+import { ResponsiveContext } from 'grommet'
+
+const ResponsiveGrid = ({ children, areas, ...props }) => {
+  const size = React.useContext(ResponsiveContext);
+  return (
+    <History areas={areas[size]} {...props}>
+      {children}
+    </History>
+  );
+};
 
 const Projects = (props) => {
   return (
     <ResumeSection>
       <SectionTitle>Projects</SectionTitle>
       {props.content.map((project, idx) => (
-        <History
+        <ResponsiveGrid
           key={idx}
-          rows={["flex"]}
+          rows={["auto",'auto']}
           columns={["1/3", "flex"]}
           gap="small"
-          areas={[
-            { name: "organization", start: [0, 0], end: [0, 0] },
-            { name: "content", start: [1, 0], end: [1, 0] },
-          ]}
+          areas={{
+            small: [
+              { name: "organization", start: [0, 0], end: [1, 0] },
+              { name: "content", start: [0, 1], end: [1, 1] },
+            ],
+            medium: [
+              { name: "organization", start: [0, 0], end: [0, 0] },
+              { name: "content", start: [1, 0], end: [1, 0] },
+            ],
+            large: [
+              { name: "organization", start: [0, 0], end: [0, 0] },
+              { name: "content", start: [1, 0], end: [1, 0] },
+            ],
+            xlarge: [
+              { name: "organization", start: [0, 0], end: [0, 0] },
+              { name: "content", start: [1, 0], end: [1, 0] },
+            ],
+          }}
         >
           <HistoryInfo gridArea="organization">
             <Organization render={project.organization} />
@@ -33,7 +57,7 @@ const Projects = (props) => {
             <Type render={project.type} />
             <Description render={project.project_description} />
           </HistoryContent>
-        </History>
+        </ResponsiveGrid>
       ))}
     </ResumeSection>
   );

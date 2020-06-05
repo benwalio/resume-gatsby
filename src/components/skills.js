@@ -11,7 +11,6 @@ import { ResponsiveContext } from "grommet";
 
 const ResponsiveGrid = ({ children, columns, ...props }) => {
   const size = React.useContext(ResponsiveContext);
-  console.log(size);
   return (
     <SkillStackGrid columns={columns[size]} {...props}>
       {children}
@@ -37,7 +36,7 @@ const Skills = (props) => {
             <SkillStack anchor="center">
               <SkillStrength
                 max="100"
-                round="true"
+                round={true}
                 type="circle"
                 size="small"
                 values={[
